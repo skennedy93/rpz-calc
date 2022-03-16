@@ -1,0 +1,111 @@
+body {
+margin: 10px;
+}
+
+i {
+  font-size: 24px;
+  color: orange;
+}
+
+th {
+  text-align: center;
+}
+
+h5 {
+  display: inline;
+}
+
+h6 {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-sm {
+  font-size: 16;
+}
+
+.customerInput {
+  display: inline;
+  width: 18%;
+}
+
+.boxLength {
+  display: inline;
+  width: 30%;
+  margin-left: 1%;
+  margin-right: 2%;
+}
+
+.boxWidth {
+  display: inline;
+  width: 30%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.boxHeight {
+  display: inline;
+  width: 30%;
+  margin-left: 2%;
+  margin-right: 1%;
+}
+
+.overhangX {
+  display: inline;
+  width: 47%;
+  margin-left: 1%;
+  margin-right: 2%;
+}
+
+.overhangY {
+  display: inline;
+  width: 47%;
+  margin-left: 2%;
+  margin-right: 1%;
+}
+
+.rPZ10SystemNotes {
+  display: none;
+}
+
+.rPZMAXSystemNotes {
+  display: none;
+}
+
+.rPZ10Settings {
+  display: none;
+}
+
+.icon {
+  text-align: center;
+}
+
+#conveyorHeight {
+  margin-left: 10px;
+}
+
+#conveyorOrientation {
+  margin-left: 103px;
+}
+
+#companyName {
+  margin-left: 213px;
+}
+
+#companyLocation {
+  margin-left: 221px;
+}
+
+#lineNumber {
+  margin-left: 180px;
+}
+
+#contactName {
+  margin-left: 169px;
+}

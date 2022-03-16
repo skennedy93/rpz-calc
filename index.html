@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RPZ Selection Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6c8caaa5bf.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1>Customer Information:</h1>
+    <h5>Company: </h5>
+    <input type="text" class="form-control input-sm customerInput" name="" id="companyName">
+    <br>
+    <h5>Location: </h5>
+    <input type="text" class="form-control input-sm customerInput" name="" id="companyLocation">
+    <br>
+    <h5>Line Number: </h5>
+    <input type="text" class="form-control input-sm customerInput" name="" id="lineNumber">
+    <br>
+    <h5>Contact Name: </h5>
+    <input type="text" class="form-control input-sm customerInput" name="" id="contactName">
+    <br>
+    <h5>Conveyor Discharge Height (in.): </h5>
+    <input type="number" class="form-control input-sm customerInput" name="" id="conveyorHeight">
+    <br>
+    <h5>Conveyor Orientation: </h5>
+    <select class="custom-select customerInput" id="conveyorOrientation">
+      <option selected value=0>Choose One</option>
+      <option value=1>Center Infeed</option>
+      <option value=2>Left Side Infeed</option>
+      <option value=3>Right Side Infeed</option>
+    </select>
+    <div class="rPZ10Settings">
+      <br>
+      <br>
+      <h1>RPZ-10 System Settings:</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">EoAT X Offset</th>
+            <th scope="col">EoAT Y Offset</th>
+            <th scope="col">EoAT Z Offset</th>
+            <th scope="col">Approach X Offset</th>
+            <th scope="col">Approach Y Offset</th>
+            <th scope="col">Approach Z Offset</th>
+          </tr>
+        </thead>
+        <tr>
+          <td><input type="number" class="form-control input-sm" name="" id="eoAT_X_Offset" value=6.505></td>
+          <td><input type="number" class="form-control input-sm" name="" id="eoAT_Y_Offset" value=3></td>
+          <td><input type="number" class="form-control input-sm" name="" id="eoAT_Z_Offset" value=5.463></td>
+          <td><input type="number" class="form-control input-sm" name="" id="app_X_Offset" value=0></td>
+          <td><input type="number" class="form-control input-sm" name="" id="app_Y_Offset" value=2></td>
+          <td><input type="number" class="form-control input-sm" name="" id="app_Z_Offset" value=2></td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <br>
+    <h1>Case Information:</h1>
+    <table class="table table-bordered" id="caseTable">
+      <thead>
+        <tr>
+          <th style="width: 10%" scope="col">SKU</th>
+          <th style="width: 5%" scope="col">Weight (lbs)</th>
+          <th style="width: 5%" scope="col">Design Rate (cpm)</th>
+          <th style="width: 15%" scope="col">Box Size (inches) <br> L x W x H</th>
+          <th style="width: 5%" scope="col">Pallet Height (inches)</th>
+          <th style="width: 4%" scope="col">Number of Layers</th>
+          <th style="width: 8%" scope="col">Pallet Overhang (inches)<br> Width / Length</th>
+          <th style="width: 6%" scope="col">RPZ-10</th>
+          <th style="width: 6%" scope="col">RPZ-MAX</th>
+          <th style="width: 18%" scope="col">RPZ-10 Notes</th>
+          <th style="width: 18%" scope="col">RPZ-MAX Notes</th>
+        </tr>
+      </thead>
+      <tr>
+        <th scope="row"><input type="text" class="form-control input-sm SKU" name=""></th>
+        <td><input type="number" class="form-control input-sm boxWeight" name=""></td>
+        <td><input type="number" class="form-control input-sm boxRate" name=""></td>
+        <td><input type="number" class="form-control input-sm boxLength" name=""><input type="number" class="form-control input-sm boxWidth" name=""><input type="number" class="form-control input-sm boxHeight" name=""></td>
+        <td><input type="number" class="form-control input-sm palletHeight" name="" value=5.6></td>
+        <td><input type="number" class="form-control input-sm layerCount" name=""></td>
+        <td><input type="number" class="form-control input-sm overhangX" name="" value=0><input type="number" class="form-control input-sm overhangY" name="" value=0></td>
+        <td><p class="RPZ-10 icon"></p></td>
+        <td><p class="RPZ-MAX icon"></p></td>
+        <td><p class="RPZ10NoteText"></p></td>
+        <td><p class="RPZMaxNoteText"></p></td>
+      </tr>
+    </table>
+    <button type="button" id="addRow" class="btn btn-success" name="button">ADD ROW</button>
+    <button type="button" id="calculate" class="btn btn-success float-right" name="button">CALCULATE</button>
+    <br>
+    <br>
+    <div class="rPZ10SystemNotes">
+      <h1>RPZ-10 System Notes:</h1>
+      <h5 id="rPZ10Result"></h5>
+    </div>
+    <br>
+    <br>
+    <div class="rPZMAXSystemNotes">
+      <h1>RPZ-MAX System Notes:</h1>
+      <h5 id="rPZMAXResult"></h5>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
